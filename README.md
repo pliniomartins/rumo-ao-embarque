@@ -10,6 +10,12 @@
 </p>
 
 <p align="center">
+  <a href="https://rumoaoembarque.pages.dev/">
+    <img src="https://img.shields.io/badge/Acessar_Plataforma-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Acessar Plataforma">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://rumoaoembarque.pages.dev"><img alt="Acessar a plataforma" src="https://img.shields.io/badge/acessar-rumoaoembarque.pages.dev-f97316?style=for-the-badge"></a>
   <img alt="Status" src="https://img.shields.io/badge/status-em%20produção-22c55e?style=for-the-badge">
   <img alt="Código" src="https://img.shields.io/badge/código-privado-64748b?style=for-the-badge">
@@ -37,38 +43,42 @@ A plataforma está **no ar e com usuários reais**. Foi idealizada, desenhada e 
 
 ## 📊 Em números
 
-| | |
-|---|---|
-| **3.334** questões | 2.035 de provas reais e 1.299 inéditas comentadas |
-| **648** simulados | provas completas, por assunto, só específicas, só básicas e relâmpago |
-| **1.058** questões rápidas | exclusivas para desafios entre colegas |
-| **330** flashcards | inéditos, além dos itens das provas reais |
-| **28** resumos | Português e Matemática, organizados por área e assunto |
-| **16** ênfases | todas as do último edital, com mapa do edital por ênfase |
-| **80** níveis | com itens de avatar liberados por progresso |
+|                            |                                                                       |
+| -------------------------- | --------------------------------------------------------------------- |
+| **3.334** questões         | 2.035 de provas reais e 1.299 inéditas comentadas                     |
+| **648** simulados          | provas completas, por assunto, só específicas, só básicas e relâmpago |
+| **1.058** questões rápidas | exclusivas para desafios entre colegas                                |
+| **330** flashcards         | inéditos, além dos itens das provas reais                             |
+| **28** resumos             | Português e Matemática, organizados por área e assunto                |
+| **16** ênfases             | todas as do último edital, com mapa do edital por ênfase              |
+| **80** níveis              | com itens de avatar liberados por progresso                           |
 
 ## ✨ Funcionalidades
 
 **Estudo**
+
 - 📝 **Banco de questões** com filtros por disciplina, assunto, banca, ano e ênfase, e comentário em cada questão inédita
 - ⏱️ **Simulados cronometrados** com correção automática e desempenho por disciplina
-- 📖 **Material de estudo** organizado em disciplina → área → assunto (ex.: *Português → Interpretação de texto*), com botão "Praticar este assunto" que leva direto às questões
+- 📖 **Material de estudo** organizado em disciplina → área → assunto (ex.: _Português → Interpretação de texto_), com botão "Praticar este assunto" que leva direto às questões
 - 🗂️ **Flashcards** de certo/errado para revisão rápida
 - 📅 **Plano de estudos** gerado a partir da data da prova, do tempo disponível por dia e da ênfase do aluno
 - 🗺️ **Mapa do edital** e painel de desempenho por tópico
 
 **Gamificação**
+
 - 🎮 XP, níveis, missões diárias e sequência de dias estudados
 - 🧍 **Avatar 3D** personalizável (corpo, rosto, cabelo, roupa, acessórios, pets), renderizado com three.js
 - 🛍️ Loja de itens do avatar com pagamento via **Pix**: o BR Code (com CRC16) é gerado no próprio app
 
 **Social**
+
 - 🏆 Ranking semanal, mensal e geral, com filtro por ênfase
 - 💬 Mural da turma, chat, colegas de estudo, desafios 1×1 e duplas
 - 🔔 Central de notificações (amizades, desafios, novidades, compras)
 - 🛡️ Moderação: denunciar, bloquear e painel da monitoria para tratar denúncias
 
 **Plataforma**
+
 - 👩‍💼 Painel administrativo da monitoria: alunos, acessos, pedidos da loja, novidades e denúncias
 - 📱 **PWA**: instalável na tela inicial do celular (Android e iPhone)
 - 🔐 Login com Google e e-mail, 7 dias de teste grátis e planos de assinatura
@@ -102,18 +112,19 @@ A plataforma está **no ar e com usuários reais**. Foi idealizada, desenhada e 
 
 ## 🧱 Arquitetura e tecnologias
 
-| Camada | Tecnologia | Uso |
-|---|---|---|
-| Front-end | **React 18 + Vite** | SPA com roteador por hash e estado global próprio (`useSyncExternalStore`) |
-| 3D | **three.js** | Avatar em voxel, com animações e itens equipáveis |
-| Autenticação | **Firebase Auth** | Login com Google e e-mail/senha |
-| Banco de dados | **Cloud Firestore** | Progresso, perfis, social e loja, protegidos por regras de segurança validando cada campo |
-| Hospedagem | **Cloudflare Pages** | Deploy estático com `_worker.js` para rotas especiais |
-| Pagamentos | **Pix (BR Code)** | Payload EMV e CRC16 gerados no cliente, com confirmação pela monitoria |
-| Conteúdo | **Python** | Pipeline que gera, valida e monta o banco de questões, simulados e resumos em JSON |
-| Testes | **Playwright** | Testes ponta a ponta dos fluxos principais, com Firebase simulado |
+| Camada         | Tecnologia           | Uso                                                                                       |
+| -------------- | -------------------- | ----------------------------------------------------------------------------------------- |
+| Front-end      | **React 18 + Vite**  | SPA com roteador por hash e estado global próprio (`useSyncExternalStore`)                |
+| 3D             | **three.js**         | Avatar em voxel, com animações e itens equipáveis                                         |
+| Autenticação   | **Firebase Auth**    | Login com Google e e-mail/senha                                                           |
+| Banco de dados | **Cloud Firestore**  | Progresso, perfis, social e loja, protegidos por regras de segurança validando cada campo |
+| Hospedagem     | **Cloudflare Pages** | Deploy estático com `_worker.js` para rotas especiais                                     |
+| Pagamentos     | **Pix (BR Code)**    | Payload EMV e CRC16 gerados no cliente, com confirmação pela monitoria                    |
+| Conteúdo       | **Python**           | Pipeline que gera, valida e monta o banco de questões, simulados e resumos em JSON        |
+| Testes         | **Playwright**       | Testes ponta a ponta dos fluxos principais, com Firebase simulado                         |
 
 **Algumas decisões técnicas**
+
 - **Conteúdo como dados.** Questões, simulados e resumos são JSON carregados sob demanda. O app não precisa ser reconstruído para crescer o banco.
 - **Geração validada.** As questões inéditas saem de geradores em Python que conferem gabarito único, alternativas sem repetição e distratores plausíveis antes de entrar no banco.
 - **Segurança no servidor.** As regras do Firestore limitam o que cada aluno pode gravar: só o próprio progresso, sem alterar XP de outros, com tamanhos e tipos validados.
@@ -140,4 +151,4 @@ A plataforma está **no ar e com usuários reais**. Foi idealizada, desenhada e 
 
 Este repositório existe apenas para apresentar o projeto. O código-fonte, o banco de questões, os textos e as imagens da plataforma não estão licenciados para cópia, modificação ou redistribuição.
 
-*Projeto independente, sem vínculo com a Petrobras.*
+_Projeto independente, sem vínculo com a Petrobras._
