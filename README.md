@@ -16,8 +16,8 @@
 </p>
 
 <p align="center">
-  <a href="https://rumoaoembarque.pages.dev"><img alt="Acessar a plataforma" src="https://img.shields.io/badge/acessar-rumoaoembarque.pages.dev-f97316?style=for-the-badge"></a>
-  <img alt="Status" src="https://img.shields.io/badge/status-em%20produção-22c55e?style=for-the-badge">
+  <a href="https://rumoaoembarque.pages.dev"><img alt="Acessar a plataforma" src="https://img.shields.io/badge/acessar-rumoaoembarque.pages.dev-f97316?style=for-the-badge"></a>  
+<img alt="Status" src="https://img.shields.io/badge/Status-Concluido-22c55e?style=for-the-badge">
   <img alt="Código" src="https://img.shields.io/badge/código-privado-64748b?style=for-the-badge">
 </p>
 
